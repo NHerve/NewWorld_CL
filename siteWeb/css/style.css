@@ -1,0 +1,96 @@
+html, head, body {width:100%;}
+.cl-12 {float:left; width:100%;}
+.cl-11 {float:left; width:91%;}
+.cl-10 {float:left; width:83%;}
+.cl-9 {float:left; width:75%;}
+.cl-8 {float:left; width:66%;}
+.cl-7 {float:left; width:58%;}
+.cl-6 {float:left; width:50%;}
+.cl-5 {float:left; width:41%;}
+.cl-4 {float:left; width:33%;}
+.cl-3 {float:left; width:25%;}
+.cl-2 {float:left; width:16%;}
+.cl-1 {float:left; width:8%;}
+
+
+html, body {height:100%;}
+
+body {height:100%;
+   background: linear-gradient(#a8a69f , #e3e3e3);
+   margin:0;
+   padding:0;
+}
+
+.ninja{
+color:#1c2223;
+}
+
+.hautDePage {
+  height=5%;
+  background: #1c2223;
+  color: #ffffff; 
+}
+.hautDePage a:link {color: white;}
+.hautDePage a:visited {color: white;}
+.hautDePage a:active {color: white;}
+
+.menu a{
+text-decoration:none;
+color: #000000;
+}
+.menu ul{list-style-type:none;}
+.menu {background: linear-gradient(#a8a69f , #e3e3e3);}
+
+.ninja{
+color:#1c2223;
+}
+
+.hautDePage {
+  height=5%;
+  background: #1c2223;
+  }
+
+
+#NewWorld{
+text-shadow: 5px 5px 1px #e3e3e3;
+}
+
+#searchthis{padding-top:18px;}
+
+.corp {background-image:url(monde.png);}
+.corp {background-repeat:no-repeat;}
+.corp {background-repeat:repeat-x;}
+.corp {background-position:center;}
+.corp {background-position:top;}
+.corp img{max-width:100% max-height:100%;}
+
+.info {margin-top:-355px;}
+.info {background: linear-gradient(#a8a69f , #e3e3e3);}
+
+.texte_accueil p{
+text-align:center;
+margin-left:-40%;
+margin-top:20%;
+color: #e3e3e3;
+}
+
+.image{
+margin-top:5%;
+}
+.image2{
+margin-top:5%;
+}
+
+.formulaire_inscription{
+margin-top:1%;
+color:#ffffff;
+margin-left:5%;
+
+}
+
+.liste_deroulante{
+margin-top:2%;
+color:#ffffff;
+}
+
+.input_number input{width:50px;}
