@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{utilisateur.prenom}} {{utilisateur.nom}}
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+      <ion-item>
+        <br/>
+        <h2>{{utilisateur.ville}}</h2>
+        <h2>{{utilisateur.adresse}}</h2>
+        <h2>{{utilisateur.codePostal}}</h2>    
+        <br/>
+        <p>{{utilisateur.dateVisite}}</p>
+        <p>{{utilisateur.commentaire}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-label>Est validé ?</ion-label>
+        <ion-toggle value="foo" checked="true"></ion-toggle> 
+        </ion-item>
+        
+        <!--
+        <button (click)="show = !show">{{show ? 'hide' : 'show'}}</button>
+        <br>
+        show = {{show}}
+        <br>
+        <div *ngIf="show; else elseBlock">Text to show</div>
+        <ng-template #elseBlock>Alternate text while primary text is hidden</ng-template>
+        
+
+      <ion-item>
+        Commentaires
+        <ion-note item-end>
+          {{visite.motifRejet}}
+        </ion-note>
+      </ion-item>
+      <ion-item>
+        Heure début
+        <ion-note item-end>
+          {{visite.debut}}
+        </ion-note>
+      </ion-item>
+      <ion-item>
+        Heure fin
+        <ion-note item-end>
+          {{visite.fin}}
+        </ion-note>
+      </ion-item>
+      -->
+  </ion-list>
+</ion-content>

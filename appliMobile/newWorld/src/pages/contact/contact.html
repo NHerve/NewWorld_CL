@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Contact</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let user of utilisateur">
+    <a ion-item (click)="openModal({utilisateurNum: user.id})">
+      <ion-icon name="arrow-forward" item-left></ion-icon>
+      {{user.prenom}} {{user.nom}}
+    </a>
+  </ion-list>
+</ion-content>
