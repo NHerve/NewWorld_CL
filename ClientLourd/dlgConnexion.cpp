@@ -87,3 +87,8 @@ void DlgConnexion::on_butCancel_clicked()
 {
     QDialog::reject();
 }
+
+QString DlgConnexion::getLogin()
+{
+    return ui->lineEditUser->text();
+}

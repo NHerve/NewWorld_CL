@@ -14,10 +14,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    dlgConnexion.cpp
+    dlgConnexion.cpp \
+    mainwindowcontroleur.cpp
 
 HEADERS  += mainwindow.h \
-    dlgConnexion.h
+    dlgConnexion.h \
+    mainwindowcontroleur.h
 
 FORMS    += mainwindow.ui \
-    dlgConnexion.ui
+    dlgConnexion.ui \
+    mainwindowcontroleur.ui

@@ -7,6 +7,7 @@
 #include <QLibraryInfo>
 #include <QSqlQuery>
 #include <QMessageBox>
+#include "mainwindowcontroleur.h"
 
 int main(int argc, char *argv[])
 {
@@ -14,7 +15,7 @@ int main(int argc, char *argv[])
 
     QSqlDatabase maBase=QSqlDatabase::addDatabase("QMYSQL");
     maBase.setHostName("localhost");
-    maBase.setDatabaseName("dbNewWorld");
+    maBase.setDatabaseName("dbNewWorld2");
     maBase.setUserName("adminDBNW");
     maBase.setPassword("@42Bz8ai");
 
@@ -25,16 +26,17 @@ int main(int argc, char *argv[])
         while(login.exec()==QDialog::Accepted)
         {
             QString qsTypeUser = login.getTypeUser();
+            QString qsLoginUser = login.getLogin();
 
             if(qsTypeUser == "gestionnaire")
             {
-                MainWindow w;
+                MainWindow w(qsLoginUser);
                 w.show();
                 return a.exec();
             }
             else if(qsTypeUser == "controleur")
             {
-                MainWindow w;
+                MainWindowControleur w(qsLoginUser);
                 w.show();
                 return a.exec();
             }

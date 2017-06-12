@@ -6,19 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>642</width>
-    <height>675</height>
+    <width>592</width>
+    <height>632</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Manager</string>
+   <string>Gestionnaire</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
      <widget class="QTabWidget" name="Statistique">
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="Personnel">
        <attribute name="title">
@@ -189,7 +189,6 @@
          <widget class="QListWidget" name="listWidgetPersonnels"/>
         </item>
        </layout>
-       <zorder>layoutWidget</zorder>
        <zorder>listWidgetPersonnels</zorder>
        <zorder>label</zorder>
        <zorder>label_2</zorder>
@@ -217,6 +216,182 @@
        <zorder>label_12</zorder>
        <zorder>lineEditIban</zorder>
       </widget>
+      <widget class="QWidget" name="GestionProduit">
+       <attribute name="title">
+        <string>Gestion</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0" rowspan="6">
+         <widget class="QSplitter" name="splitter_5">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QLabel" name="label_35">
+           <property name="text">
+            <string>Liste des produits :</string>
+           </property>
+          </widget>
+          <widget class="QListWidget" name="listWidgetProduit"/>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_13">
+          <property name="text">
+           <string>Rayon :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QComboBox" name="cbRayon"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="pushButtonAddRayon">
+          <property name="text">
+           <string>Ajouter rayon</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="pushButtonDelRayon">
+          <property name="text">
+           <string>Supprimer un rayon</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_14">
+          <property name="text">
+           <string>Categorie :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QComboBox" name="comboBoxCat"/>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="pushButtonAddCat">
+          <property name="text">
+           <string>Ajouter categorie</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QPushButton" name="pushButtonDelCat">
+          <property name="text">
+           <string>Supprimer categorie</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLabel" name="label_15">
+          <property name="text">
+           <string>Nom du produit :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QLineEdit" name="lineEditNomProd"/>
+        </item>
+        <item row="5" column="1">
+         <widget class="QPushButton" name="pushButtonAdd">
+          <property name="text">
+           <string>Ajouter produit</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="2">
+         <widget class="QPushButton" name="pushButtonDel">
+          <property name="text">
+           <string>Supprimer produit</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Visite">
+       <attribute name="title">
+        <string>Visite</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_16">
+          <property name="text">
+           <string>Controleur :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" colspan="3">
+         <widget class="QLabel" name="label_17">
+          <property name="text">
+           <string>Personne a visiter/derniere visite :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QListWidget" name="listWidgetControleur"/>
+        </item>
+        <item row="1" column="1" colspan="3">
+         <widget class="QListWidget" name="listWidgetProducteur"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_18">
+          <property name="text">
+           <string>Prochaine visite :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_20">
+          <property name="text">
+           <string>Date :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" rowspan="5">
+         <widget class="QListWidget" name="listWidgetVisite"/>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLabel" name="label_21">
+          <property name="text">
+           <string>Heure debut :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2" colspan="2">
+         <widget class="QTimeEdit" name="timeEditDebut"/>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLabel" name="label_22">
+          <property name="text">
+           <string>Heure fin :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="2" colspan="2">
+         <widget class="QTimeEdit" name="timeEditFin"/>
+        </item>
+        <item row="6" column="1">
+         <widget class="QLabel" name="label_19">
+          <property name="text">
+           <string>Commentaire :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2" rowspan="2" colspan="2">
+         <widget class="QDateEdit" name="dateEdit"/>
+        </item>
+        <item row="6" column="2" colspan="2">
+         <widget class="QTextEdit" name="textEdit"/>
+        </item>
+        <item row="7" column="2" colspan="2">
+         <widget class="QPushButton" name="addVisite">
+          <property name="text">
+           <string>Ajouter Visite</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
       <widget class="QWidget" name="Stat">
        <attribute name="title">
         <string>Statistics</string>
@@ -231,8 +406,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>642</width>
-     <height>26</height>
+     <width>592</width>
+     <height>27</height>
     </rect>
    </property>
   </widget>

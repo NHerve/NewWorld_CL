@@ -21,6 +21,8 @@ public:
 
     QString getTypeUser();
 
+    QString getLogin();
+
 private slots:
     void on_lineEditUser_textChanged(const QString &arg1);
 
@@ -29,6 +31,7 @@ private slots:
     void on_butConnexion_clicked();
 
     void on_butCancel_clicked();
+
 
 private:
     Ui::DlgConnexion *ui;
