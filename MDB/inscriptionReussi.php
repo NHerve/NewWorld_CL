@@ -33,7 +33,7 @@
             <div class="collapse navbar-collapse" id="collapseEx2">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link">Acheter<span class="sr-only">(current)</span></a>
+                        <a href="catalogue.php"class="nav-link">Acheter</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link">Produire</a>

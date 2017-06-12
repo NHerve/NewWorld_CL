@@ -46,8 +46,21 @@ body,
     }
 }
 
-input[type="text"], textarea {
+.whiteText
+{
+    color : #ffffff !important;
+}
 
-  color : #ffffff !important; 
+.Profile {
+    width : 90% !important;
+}
 
+.blackText
+{
+    color : #000000 !important;
+}
+
+.colorNavbar
+{
+    background-color: #1C2331 !important;
 }

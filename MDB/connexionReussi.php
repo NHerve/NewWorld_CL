@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,9 +20,10 @@
 </head>
 
 <body>
-
-
-
+    <?php
+    if(isset($_SESSION['type_utilisateur']))
+    {
+    ?>
 
     <!--Navbar-->
     <nav class="navbar navbar-toggleable-md navbar-dark scrolling-navbar fixed-top">
@@ -27,24 +31,29 @@
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapseEx2" aria-controls="collapseEx2" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="index.php">
+            <a class="navbar-brand" href="connexionReussi.php">
                 <strong>NW</strong>
             </a>
             <div class="collapse navbar-collapse" id="collapseEx2">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link">Acheter<span class="sr-only">(current)</span></a>
+                        <a href="catalogue.php"class="nav-link">Acheter</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Produire</a>
+                        <a href="proposer.php" class="nav-link">Produire</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link">Distribuer</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="panier.php"class="nav-link">Panier</a>
+                    </li>
                 </ul>
+                    <a href="profil.php" class="nav-link">Profil</a>
                 <form class="form-inline waves-effect waves-light">
                     <input class="form-control" type="text" placeholder="Search">
                 </form>
+                <a href="fonctionPhp/deconnexionFonction.php" class="nav-link"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
             </div>
         </div>
     </nav>
@@ -57,8 +66,7 @@
                 <li>
                     <p class="wow fadeInDown">Bienvenue sur le site de NewWorld</p>
                     <?php
-                    session_start();
-                    var_dump($_SESSION['type_utilisateur']);
+                    echo "<p class='wow fadeInDown'>".$_SESSION['Login']."</p>";
                     ?>
                 </li>
             </ul>
@@ -321,7 +329,15 @@ Distribue</br>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
 		
+    <?php
+        }
+        else
+        {
+            header('Location: connexion.php');
+        }
+    ?>
 
 </body>
+
 
 </html>

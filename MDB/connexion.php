@@ -1,3 +1,6 @@
+<?php 
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +36,7 @@
             <div class="collapse navbar-collapse" id="collapseEx2">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link">Acheter<span class="sr-only">(current)</span></a>
+                        <a href="catalogue.php"class="nav-link">Acheter</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link">Produire</a>
@@ -56,21 +59,41 @@
             <ul>
                 <li>
                     <h1 class="h1-responsive wow fadeInDown" data-wow-delay="0.2s">Connexion</h1></li>
-                <li>	
+                <li>
+                <?php 
+
+                        if(!isset($_SESSION['erreurConnexion']))
+                        {
+                            $_SESSION['erreurConnexion']=0;
+                        }
+                        else
+                        {
+                            if($_SESSION['erreurConnexion']==1)
+                            {
+                                $_SESSION['erreurConnexion']=0;
+                                echo "<script type='text/javascript'>alert('Erreur identifiant ou mot de passe incorrecte');</script>";
+                            }
+                            if($_SESSION['erreurConnexion']==2)
+                            {
+                                $_SESSION['erreurConnexion']=0;
+                                echo "<script type='text/javascript'>alert('Inscription valider');</script>";
+                            }
+                        }
+
+                ?>
 			<form method="post" class="formulaire_connexion" action="fonctionPhp/connexionFonction.php">
 		<div class="row">
 
 			<div class="col-md-12">
 	
 				<div class="md-form">
-      					 <input type="text" name="Login" class="form-control wow bounceIn" data-wow-delay="0.2s" required>
+      					 <input type="text" name="Login" class="form-control wow bounceIn whiteText" data-wow-delay="0.2s" required>
    					 <label class=" wow bounceIn" data-wow-delay="0.2s" for="form2">Login*</label>
 				</div>
 
 				<div class="md-form">
-      					 <input type="Password" name="Password" class="form-control wow bounceIn" data-wow-delay="0.2s" required>
-   					 <label class=" wow bounceIn" data-wow-delay="0.2s" for="form2">Mot de passe*</label>
-				</div>
+      					 <input type="Password" name="Password" class="form-control wow bounceIn whiteText" data-wow-delay="0.2s" placeholder="Mot de passe*" required>
+   			    </div>
 
 				</br></br>
 
@@ -97,7 +120,7 @@
             <ul>
                 <li>
                     <h5>Connecter vous des maintenant</h5></li></br>
-                <li><a target="_blank" href="https://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default">Connexion</a></li>
+                <li><a href="connexion.php" class="btn btn-default">Connexion</a></li>
             </ul>
         </div>
         <!--/.Call to action-->

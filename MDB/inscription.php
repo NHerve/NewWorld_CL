@@ -33,7 +33,7 @@
             <div class="collapse navbar-collapse" id="collapseEx2">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link">Acheter<span class="sr-only">(current)</span></a>
+                        <a href="catalogue.php"class="nav-link">Acheter</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link">Produire</a>
@@ -57,54 +57,72 @@
                 <li>
                     <h1 class="h1-responsive wow fadeInDown" data-wow-delay="0.2s">Inscription</h1></li>
                 <li>	
-			<form method="post" class="formulaire_inscription" action="fonctionPhp/inscriptionFonction.php">
+	 	<form method="post" class="formulaire_inscription" action="fonctionPhp/inscriptionFonction.php">
 		<div class="row">
 
 			<div div class="col-md-12">
 	
 				<div class="md-form">
-      					 <input type="text" name="Login" class="form-control wow bounceIn" data-wow-delay="0.2s" required>
+      					 <input type="text" name="Login" class="form-control wow bounceIn whiteText" data-wow-delay="0.2s" required>
    					 <label class=" wow bounceIn" data-wow-delay="0.2s" for="form2">Login*</label>
 				</div>
 
 				<div class="md-form">
-      					 <input type="text" name="Nom" class="form-control wow bounceIn" data-wow-delay="0.2s" required>
+      					 <input type="text" name="Nom" class="form-control wow bounceIn whiteText" data-wow-delay="0.2s" required>
    					 <label class=" wow bounceIn" data-wow-delay="0.2s" for="form2">Nom*</label>
 				</div>
 				<div class="md-form">
-      					 <input type="text" name="Prenom" class="form-control wow bounceIn" data-wow-delay="0.2s" required>
+      					 <input type="text" name="Prenom" class="form-control wow bounceIn whiteText" data-wow-delay="0.2s" required>
    					 <label class=" wow bounceIn" data-wow-delay="0.2s" for="form2">Prenom*</label>
 				</div>
 				<div class="md-form">
-      					 <input type="text" name="Telephone" class="form-control wow bounceIn" data-wow-delay="0.2s" required>
-   					 <label class=" wow bounceIn" data-wow-delay="0.2s" for="form2">Telephone*</label>
+      					 <input type="text" name="Telephone" class="form-control wow bounceIn whiteText" data-wow-delay="0.2s" required>
+   					 <label class=" wow bounceIn" data-wow-delay="0.2s" for="form2">Telephone Portable*</label>
 				</div>
 				<div class="md-form">
-					 <input type="text" name="Email" class="form-control wow bounceIn" data-wow-delay="0.2s" required>
+					 <input type="email" name="Email" class="form-control wow bounceIn whiteText" data-wow-delay="0.2s" required>
    					 <label class=" wow bounceIn" data-wow-delay="0.2s" for="form2">Email*</label>
 				</div>
 
 			
 				<div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-primary wow fadeInDown" data-wow-delay="0.2s">
+                    <input type="radio" name="type_user" id="option2" value="consommateur" autocomplete="off"> Consommateur
+                  </label>
+
 				  <label class="btn btn-primary active wow fadeInDown" data-wow-delay="0.2s">
-				    <input type="radio" name="type_user" id="option1" value="producteur" autocomplete="off"> Producteur
+				    <input type="radio" name="type_user" id="option1" value="producteur" autocomplete="off" checked> Producteur
 				  </label>
+
 				  <label class="btn btn-primary wow fadeInDown" data-wow-delay="0.2s">
-				    <input type="radio" name="type_user" id="option2" value="consommateur" autocomplete="off" checked> Consommateur
-				  </label>
-				  <label class="btn btn-primary wow fadeInDown" data-wow-delay="0.2s">
-				    <input type="radio" name="type_user" id="option3" value="PDV"autocomplete="off"> Point de Vente</label>
+				    <input type="radio" name="type_user" id="option3" value="PDV" autocomplete="off"> Point de Vente
+                  </label>
+                
 				</div>
-
-				<br/><br/>
-
-			
+                <br/><br/></br>
+                    <label>Question Secrete :</label>
+                    <select name="questionSecrete" class="browser-default">
+                        <option value="0">quel est votre date de naissance ?</option>
+                        <option value="1">quel est le nom de votre annimal de compagnie ?</option>
+                        <option value="2">quel est votre surnom ?</option>
+                        <option value="3">quel est votre jeu préféré ?</option>
+                        <option value="4">quel est le nom de votre meilleur ami ?</option>
+                        <option value="5">quel est votre première voiture ?</option>
+                        <option value="6">quel est le nom de votre premier proffesseur ?</option>
+                        <option value="7">quel est le nom de jeune fille de votre mêre ?</option>
+                        <option value="8">quel est le prenom de votre premier enfant ?</option>   
+                    </select>
+                    <br/>
+                <div class="md-form">
+                    <input type="text" name="Reponse" class="form-control wow bounceIn whiteText" data-wow-delay="0.2s" required>
+                    <label class=" wow bounceIn" data-wow-delay="0.2s" for="form2">Reponse*</label>
+                </div>
+                <br/><br/>
 				<input class="btn btn-primary wow fadeInDown" data-wow-delay="0.2s" type="submit" value="M'inscrire">			
 			
 			</div>
-
-		</form>
 		</div>
+        </form>
                 </li>
             </ul>
         </div>
@@ -120,8 +138,8 @@
             <h4>NewWorld</h4>
             <ul>
                 <li>
-                    <h5>Connecter vous des maintenant</h5></li></br>
-                <li><a target="_blank" href="https://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default">Connexion</a></li>
+                    <h5>Connecter vous des maintenant</h5></li><br/>
+                <li><a href="connexion.php" class="btn btn-default">Connexion</a></li>
             </ul>
         </div>
         <!--/.Call to action-->
